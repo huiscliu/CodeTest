@@ -7,7 +7,7 @@
 
 typedef struct SNODE_
 {
-    size_t size;
+    int size;
     void *d;
 
 } SNODE;
