@@ -1,2 +1,3 @@
-# CodeTest
-collection of tiny programs for training
+# CodeCrack
+
+Collection of tiny programs for training purpose
