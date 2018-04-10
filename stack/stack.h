@@ -5,24 +5,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct SNODE_
-{
-    int size;
-    void *d;
-
-} SNODE;
-
 typedef struct STACK_
 {
     int size;
     int alloc;
-    SNODE *n;
+    void *d;
 
 } STACK;
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+STACK * stack_create(size_t size);
+void stack_destroy(STACK *s);
+
+void stack_push(STACK *s, void *m);
+void stack_pop(STACK *s, void *m);
 
 #ifdef __cplusplus
 }
