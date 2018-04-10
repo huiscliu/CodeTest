@@ -1,3 +1,3 @@
 # CodeCrack
 
-Collection of tiny programs for training purpose
+Collection of small programs for training purpose
