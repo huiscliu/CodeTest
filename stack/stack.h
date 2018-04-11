@@ -12,10 +12,13 @@ typedef struct STACK_
     int size;
     int alloc;
     int elem_size;
+    int magic;
 
     void *d;
 
 } STACK;
+
+#define STACK_MAGIC 0x20180410
 
 #ifdef __cplusplus
 extern "C" {
@@ -26,6 +29,9 @@ void stack_destroy(STACK *s);
 
 void stack_push(STACK *s, void *m);
 void stack_pop(STACK *s, void *m);
+
+int stack_get_size(STACK *s);
+int stack_get_elem_size(STACK *s);
 
 #ifdef __cplusplus
 }
