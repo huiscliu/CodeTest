@@ -4,11 +4,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
+#include <string.h>
 
 typedef struct STACK_
 {
     int size;
     int alloc;
+    int elem_size;
+
     void *d;
 
 } STACK;
@@ -17,7 +21,7 @@ typedef struct STACK_
 extern "C" {
 #endif
 
-STACK * stack_create(size_t size);
+STACK * stack_create(size_t elem_size);
 void stack_destroy(STACK *s);
 
 void stack_push(STACK *s, void *m);
