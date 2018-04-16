@@ -178,9 +178,11 @@ int main(int argc, char **argv)
 
     printf("\nRandom 0-1 matrix:\n");
     A = mat_gen(r, c);
-    B = mat_dis(A, r, c);
 
     printf("\nResult matrix:\n");
+    B = mat_dis(A, r, c);
+
+    /* print results */
     for (i = 0; i < r; i++) {
         for (j = 0; j < c; j++) {
             printf("%3d ", B[i][j]);
