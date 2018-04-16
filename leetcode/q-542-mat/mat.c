@@ -49,7 +49,7 @@ int ** mat_gen(int row, int col)
     return A;
 }
 
-int mat_set_dis(int **B, int i, int j, int r, int c, int round)
+int mat_get_dis(int **B, int i, int j, int r, int c, int round)
 {
     int k = -1, d = -1;
 
@@ -161,7 +161,7 @@ int ** mat_dis(int **A, int r, int c)
     while (s > 0) {
         m = 0;
         for (i = 0; i < s; i++) {
-            d = mat_set_dis(B, td[i].i, td[i].j, r, c, round);
+            d = mat_get_dis(B, td[i].i, td[i].j, r, c, round);
 
             if (d < 0) {
                 td[m].i =  td[i].i;
