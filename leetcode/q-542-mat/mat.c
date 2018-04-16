@@ -22,7 +22,12 @@ int ** mat_gen(int row, int col)
     srand(time(0));
 
     A = malloc(sizeof(*A) * row);
-    for (i = 0; i < row; i++) A[i] = malloc(sizeof(int) * col);
+    assert(A != NULL);
+
+    for (i = 0; i < row; i++) {
+        A[i] = malloc(sizeof(int) * col);
+        assert(A[i] != NULL);
+    }
 
     for (i = 0; i < row; i++) {
         for (j = 0; j < col; j++) {
@@ -119,8 +124,17 @@ int ** mat_dis(int **A, int r, int c)
     Pair *td; /* to be determined */
     int s, m, d, round;
 
+    assert(A != NULL);
+    assert(r > 0);
+    assert(c > 0);
+
     B = malloc(sizeof(*B) * r);
-    for (i = 0; i < r; i++) B[i] = malloc(sizeof(int) * c);
+    assert(B != NULL);
+
+    for (i = 0; i < r; i++) {
+        B[i] = malloc(sizeof(int) * c);
+        assert(B[i] != NULL);
+    }
 
     /* aux mem */
     td = malloc(sizeof(*td) * r * c);
