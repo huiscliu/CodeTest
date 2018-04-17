@@ -73,12 +73,23 @@ int maxPoints(struct Point *points, int pointsSize)
 
 int main()
 {
-    struct Point pts[] = {{0, 0}, {1,1}, {2, 3}, {2, 2}, {3, 4}, {3, 3}, {4, 4}, {4, 5}};
-    int num = 0;
+    {
+        struct Point pts[] = {{0, 0}, {1,1}, {2, 3}, {2, 2}, {3, 4}, {3, 3}, {4, 4}, {4, 5}};
+        int num = 0;
 
-    num = maxPoints(pts, 8);
+        num = maxPoints(pts, 8);
 
-    printf("max: %d\n", num);
+        printf("max: %d\n", num);
+    }
+
+    {
+        struct Point pts[] = {{0, 65536}, {1,65536}, {65536, 0}};
+        int num = 0;
+
+        num = maxPoints(pts, 3);
+
+        printf("max: %d\n", num);
+    }
 
     return 0;
 }
