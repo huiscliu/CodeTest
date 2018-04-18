@@ -47,6 +47,7 @@ int maxPoints(struct Point *points, int pointsSize)
     /* shorter one */
     p = points;
 
+    /* O(n^3), high complexity */
     for (i = 0; i < pointsSize; i++) {
         for (j = i + 1; j < pointsSize; j++) {
             n = 2;
@@ -82,7 +83,7 @@ int main()
         printf("max: %d\n", num);
     }
 
-    {
+    { /* code will give wrong results if int is 16 bits. cast to get correct results */
         struct Point pts[] = {{0, 65536}, {1,65536}, {65536, 0}};
         int num = 0;
 
