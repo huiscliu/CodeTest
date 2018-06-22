@@ -19,9 +19,11 @@ Output:
 Example 2:
 Input:
 
+```
 0 0 0
 0 1 0
 1 1 1
+```
 
 Output:
 
