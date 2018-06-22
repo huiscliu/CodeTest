@@ -5,20 +5,21 @@ The distance between two adjacent cells is 1.
 
 Example 1:
 Input:
-
+```
 0 0 0
 0 1 0
 0 0 0
+```
 
 Output:
-
+```
 0 0 0
 0 1 0
 0 0 0
+```
 
 Example 2:
 Input:
-
 ```
 0 0 0
 0 1 0
@@ -26,10 +27,11 @@ Input:
 ```
 
 Output:
-
+```
 0 0 0
 0 1 0
 1 2 1
+```
 
 Note:
 
