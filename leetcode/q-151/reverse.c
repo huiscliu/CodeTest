@@ -23,7 +23,8 @@ void reverse_a_word(char *s)
     }
 }
 
-void reverseWords(char *s) {
+void reverseWords(char *s)
+{
     int len, i;
     char *p;
     int k;
