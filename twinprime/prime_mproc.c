@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
     bs_ui = rmax /  size_of_ui + 1;
     bs = (bs_ui + num_procs - 1) / num_procs;
 
-    for (i = 0; i < num_procs; i++) {
+    for (i = 0; i < (unsigned int)num_procs; i++) {
         rg[i].id = i;
         rg[i].low = i * bs * size_of_ui + 1;
         rg[i].up = (i + 1) * bs * size_of_ui;
@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
     for (i = 0; i < bs_ui; i++) if_prime[i] = ~0;
 
     /* create number procs */
-    for (i = 0; i < num_procs; i++) {
+    for (i = 0; i < (unsigned int)num_procs; i++) {
         switch(fork()) {
             case -1:
                 perror("fork");

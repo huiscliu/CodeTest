@@ -1,7 +1,7 @@
 
 default: prime_pthread prime_mproc
 
-CFLAGS=-Wall -Wextra -O3 -lm -Wall -Wshadow -Wunreachable-code -Wredundant-decls  \
+CFLAGS=-Wall -Wextra -Ofast -lm -Wall -Wshadow -Wunreachable-code -Wredundant-decls  \
 	   -Wmissing-declarations -Wold-style-definition -Wmissing-prototypes \
 	   -Wdeclaration-after-statement -std=c99
 

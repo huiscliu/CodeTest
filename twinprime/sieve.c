@@ -1,7 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include <math.h>
+
+/* dec */
+int sieve_get(unsigned int *sieve, unsigned b);
+void make(unsigned int *sieve, unsigned int P2, unsigned int P3);
+int is_prime(unsigned int *sieve, unsigned int p);
+void cal_loc(unsigned int num, int *loc, int *rloc);
+int check_result_is_prime(unsigned int *sieve, unsigned int num);
 
 int sieve_get(unsigned int *sieve, unsigned b)
 {
@@ -11,7 +19,7 @@ int sieve_get(unsigned int *sieve, unsigned b)
 void make(unsigned int *sieve, unsigned int P2, unsigned int P3)
 {
     unsigned int i, j, k;
-    memset(sieve, 0, sizeof(sieve));
+    memset(sieve, 0, sizeof(*sieve));
 
     for (k = 1; k <= P3; k++)
         if (sieve_get(sieve, k) == 0)

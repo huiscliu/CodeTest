@@ -18,7 +18,9 @@ unsigned int flag_ui[32];
 /* if one digital number is prime */
 unsigned int *if_prime = NULL;
 
-unsigned int save_prime[6935] =
+#define PRIME_LENGTH 6935
+
+unsigned int save_prime[PRIME_LENGTH] =
 {
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 
     31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 
@@ -726,7 +728,7 @@ int is_prime(unsigned int num)
     if ((num & 1) == 0) return 0;
 
     sqroot = sqrt(num);
-    for (i = 0; save_prime[i] <= (unsigned)sqroot && i < 6935; i++) {
+    for (i = 0; save_prime[i] <= (unsigned)sqroot && i < PRIME_LENGTH; i++) {
         if (num % save_prime[i] == 0) return 0;
     }
 
